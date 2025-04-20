@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAPORAN TEORI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style id="theme-style">
+    body {
+      background-color: #fdf6f0;
+      color: #333;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .container {
+      padding: 2rem;
+      background-color: #fff0f5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      margin-bottom: 1.5rem;
+      background-color: #fcefe6;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    h1, h2, h3 {
+      color: #5d4954;
+    }
+    .form-check-label {
+      color: #5d4954;
+    }
+    .toggle-btn {
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">LAPORAN TEORI</h1>
+    <h2 class="text-center">Nur Alya Muhlis | 202332069</h2>
+
+    <div class="form-check form-switch text-end mb-3">
+      <input class="form-check-input" type="checkbox" id="toggleTheme">
+      <label class="form-check-label" for="toggleTheme">Tampilan Berantakan</label>
+    </div>
+
+    <!-- Tombol Tampilkan Semua Sub Bab -->
+    <div class="text-start mb-4">
+      <button class="btn btn-success" onclick="showAllSections()">
+        <i class="bi bi-eye"></i> View Sub Bab
+      </button>
+    </div>
+
+    <!-- Bagian Laporan -->
+    <div class="section">
+      <button class="btn btn-outline-secondary toggle-btn" onclick="toggleContent(this)">
+        <i class="bi bi-eye-slash"></i> Hide
+      </button>
+      <h3>1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</h3>
+      <p>Karena kalau kita cuma pakai HTML aja, tampilan web bakal kelihatan kaku dan polos banget, kayak dokumen biasa. Nah, CSS dipakai untuk mempercantik tampilan web, mulai dari warna, ukuran teks, posisi elemen, sampai animasi. Tanpa CSS, semua elemen HTML tampilannya standar dan itu bikin user experience kurang menarik. Sedangkan JavaScript berperan buat bikin web jadi lebih interaktif. Misalnya, ada tombol yang bisa diklik, form yang bisa langsung ngecek data input sebelum dikirim, dan berbagai macam efek dinamis lainnya. Jadi CSS bikin web-nya tampil kece, dan JavaScript bikin web-nya hidup dan bisa berinteraksi dengan pengguna.</p>
+    </div>
+
+    <div class="section">
+      <button class="btn btn-outline-secondary toggle-btn" onclick="toggleContent(this)">
+        <i class="bi bi-eye-slash"></i> Hide
+      </button>
+      <h3>2. Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web?</h3>
+      <p>CSS dan JavaScript diintegrasikan ke HTML untuk mempercantik tampilan dan menambah interaktivitas web. CSS mengatur gaya visual seperti warna dan layout, sedangkan JavaScript membuat halaman lebih dinamis, seperti menampilkan atau menyembunyikan elemen. Keduanya bisa ditulis langsung di HTML atau lewat file terpisah agar lebih rapi.</p>
+    </div>
+
+    <div class="section">
+      <button class="btn btn-outline-secondary toggle-btn" onclick="toggleContent(this)">
+        <i class="bi bi-eye-slash"></i> Hide
+      </button>
+      <h3>3. Jelaskan apa saja keuntungan menggunakan JavaScipt dan CSS?</h3>
+      <p>Menggunakan JavaScript dan CSS itu ngasih banyak manfaat. JavaScript bikin web jadi punya fitur-fitur interaktif kayak validasi form langsung di halaman, munculin popup, navigasi dinamis, bahkan sekarang bisa bikin web app yang kompleks tanpa harus reload halaman. Selain itu, JavaScript juga fleksibel banget karena bisa jalan di sisi client (browser) dan juga server (pakai Node.js). Sementara CSS punya peran besar buat bikin tampilan web jadi keren dan profesional. Kita bisa atur layout, warna, font, animasi, dan pastinya bikin tampilan yang responsif alias bisa menyesuaikan sama ukuran layar. Dengan CSS, kita juga bisa memisahkan konten dan desain, jadi file HTML nggak berantakan. Intinya, dua teknologi ini wajib banget dipakai kalau mau bikin web yang fungsional dan enak dilihat.</p>
+    </div>
+
+    <div class="section">
+      <button class="btn btn-outline-secondary toggle-btn" onclick="toggleContent(this)">
+        <i class="bi bi-eye-slash"></i> Hide
+      </button>
+      <h3>4. Jelaskan apa saja keuntungan menggunakan Bootstrap?</h3>
+      <p>Keuntungan pakai Bootstrap itu banyak banget, terutama buat kamu yang pengen bikin tampilan web cepat, rapi, dan responsif tanpa harus ngoding dari nol. Bootstrap udah nyediain kumpulan komponen siap pakai kayak tombol, form, navbar, dan grid layout yang tinggal pakai aja. Selain itu, tampilannya udah otomatis ngikutin ukuran layar, jadi webnya tetap bagus di HP, tablet, atau laptop. Jadi lebih cepat, efisien, dan tampilannya juga enak dilihat.</p>
+    </div>
+
+    <div class="section">
+      <button class="btn btn-outline-secondary toggle-btn" onclick="toggleContent(this)">
+        <i class="bi bi-eye-slash"></i> Hide
+      </button>
+      <h3>5. Contoh penggunaan Bootstrap</h3>
+      <p class="mt-2">Berikut contoh tampilannya:</p>
+      <img src="boothstrap.png" alt="Boothstrap" width="300">
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(button) {
+      const section = button.parentElement;
+      const content = section.querySelectorAll('p, button, img');
+      const icon = button.querySelector('i');
+
+      content.forEach(el => {
+        if (el.style.display === 'none') {
+          el.style.display = 'block';
+          button.innerHTML = '<i class="bi bi-eye-slash"></i> Sembunyikan';
+        } else {
+          el.style.display = 'none';
+          button.innerHTML = '<i class="bi bi-eye"></i> Tampilkan';
+        }
+      });
+    }
+
+    function showAllSections() {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        const content = section.querySelectorAll('p, button, img');
+        const btn = section.querySelector('.toggle-btn');
+        content.forEach(el => el.style.display = 'block');
+        btn.innerHTML = '<i class="bi bi-eye-slash"></i> Sembunyikan';
+      });
+    }
+
+    document.getElementById('toggleTheme').addEventListener('change', function() {
+      const style = document.getElementById('theme-style');
+      if (this.checked) {
+        style.innerHTML = `
+          body {
+            background-color: #ff69b4;
+            color: yellow;
+            font-family: Comic Sans MS;
+          }
+        `;
+      } else {
+        style.innerHTML = `
+          body {
+            background-color: #fdf6f0;
+            color: #333;
+            font-family: "Times New Roman", Times, serif;
+          }
+          .container {
+            padding: 2rem;
+            background-color: #fff0f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          .section {
+            margin-bottom: 1.5rem;
+            background-color: #fcefe6;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+          }
+          h1, h2, h3 {
+            color: #5d4954;
+          }
+          .form-check-label {
+            color: #5d4954;
+          }
+          .toggle-btn {
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+          }
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
